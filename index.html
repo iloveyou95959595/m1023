@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>마그리트</title>
+
+	<style type="text/css">
+	
+		.rain{width:1px;height:50px;
+	      background:white;position:absolute;
+	      animation: rr 0.5s infinite}
+	  @keyframes rr{
+	  	from{bottom:1000px;}
+	  		to{bottom:0px;}
+	  }  
+	</style>
+	</head>
+	<body>
+		<img src="back.png" style="width: 100%; ">
+		<div class="rain" id="rrr"><img src="dd.png"></div>
+<script type="text/javascript">
+	for(var i=0; i<100; i++){
+	var tt = rrr.cloneNode(true);
+	tt.id = i;
+	tt.style.animationDelay = i*0.7 + "s";
+	tt.style.left = i*100 + "px";
+	tt.style.animationDuration = "0.5s";
+	tt.style.height = Math.random()*100 + "px";
+	tt.style.width = 5 + "px";
+	document.body.appendChild(tt);
+
+}
+
+</script>
+</html>
